@@ -34,6 +34,106 @@ O conteúdo real (os `.md` dos agentes, filosofias, comandos e templates) vive e
 | **Biblioteca** | 9 agentes · 3 filosofias · 4 comandos · 2 templates — todos copiáveis |
 | **Começar** | Como instalar o squad em `~/.claude` |
 
+## Como instalar e usar o squad (passo a passo)
+
+Este guia é para quem quer **usar** os agentes no seu próprio Claude Code — mesmo
+sem experiência. Pré-requisito: ter o [Claude Code](https://claude.com/claude-code)
+instalado.
+
+> **O que é a pasta `~/.claude`?** É uma pasta (oculta) dentro da sua pasta de
+> usuário onde o Claude Code procura o que você adiciona: agentes, skills e
+> comandos. O `~` significa "sua pasta de usuário" — no Windows, algo como
+> `C:\Users\SeuNome`; no Mac/Linux, `/Users/seunome` ou `/home/seunome`.
+
+### 1. Abra o terminal
+
+É onde você digita comandos.
+
+- **Windows:** aperte a tecla `Windows`, digite `PowerShell` e abra.
+- **Mac:** `Cmd + Espaço`, digite `Terminal`, Enter.
+- **Linux:** abra o seu terminal preferido.
+
+### 2. Crie as três pastas
+
+Cole este comando e aperte Enter. Ele cria as três pastas de uma vez:
+
+```bash
+mkdir -p ~/.claude/agents ~/.claude/skills ~/.claude/commands
+```
+
+Para que serve cada uma:
+
+| Pasta | Guarda |
+|---|---|
+| `agents/` | Os agentes (coder-nextjs, reviewer, scribe…) |
+| `commands/` | Os comandos da esteira (generate-pbi, develop…) |
+| `skills/` | As filosofias (tdd, code, frontend) |
+
+### 3. Pegue os arquivos
+
+Você pode copiá-los do site (seção **Biblioteca**) ou direto deste repositório,
+na pasta [`src/content/`](src/content/):
+
+- Agentes → [`src/content/agentes/`](src/content/agentes/)
+- Comandos → [`src/content/comandos/`](src/content/comandos/)
+- Filosofias → [`src/content/filosofias/`](src/content/filosofias/)
+- Templates de PBI → [`src/content/pbi/`](src/content/pbi/)
+
+### 4. Coloque cada arquivo no lugar certo
+
+Este é o passo que mais confunde. **Agentes e comandos são arquivos soltos.**
+**Cada filosofia (skill) precisa de uma subpasta própria, e o arquivo dentro
+tem que se chamar `SKILL.md`.**
+
+```
+~/.claude/
+├─ agents/
+│  ├─ coder-nextjs.md
+│  ├─ reviewer.md
+│  └─ scribe.md
+├─ commands/
+│  ├─ generate-pbi.md
+│  ├─ validate-pbi.md
+│  ├─ generate-tasks.md
+│  └─ develop.md
+└─ skills/
+   ├─ tdd-philosophy/
+   │  └─ SKILL.md      ← renomeie a filosofia para SKILL.md
+   ├─ code-philosophy/
+   │  └─ SKILL.md
+   └─ frontend-philosophy/
+      └─ SKILL.md
+```
+
+> Dica: os coders já trazem as filosofias embutidas no próprio arquivo, então
+> instalar as skills é opcional — mas recomendado se você quiser carregá-las em
+> conversas normais.
+
+### 5. Reinicie o Claude Code
+
+Feche e abra o Claude Code (ou comece um chat novo). Ele só enxerga os arquivos
+novos depois de reiniciar.
+
+### 6. Rode a esteira
+
+Digite `/` para ver os comandos novos. Comece descrevendo o que quer construir:
+
+```
+/generate-pbi feature "tela de login com e-mail e senha"
+```
+
+Depois siga o fluxo, um comando de cada vez:
+
+```
+/generate-pbi   →  cria a demanda (PBI) com critérios e cenários de teste
+/validate-pbi   →  confere a demanda contra o Definition of Ready e o código
+/generate-tasks →  quebra em tarefas rastreáveis
+/develop        →  implementa (coder) → auditoria de qualidade → review
+```
+
+Travou em algum passo? Abra uma [issue](https://github.com/Caous/copilot-ia/issues)
+ou fale comigo (contatos no rodapé).
+
 ## Rodar localmente
 
 ```bash

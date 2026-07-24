@@ -26,6 +26,40 @@
   color: var(--accent);
 }
 
+/* pré-requisito: link de instalação do Claude */
+.cta__prereq {
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line-dark);
+  color: var(--fg-muted);
+  font-size: var(--step-0);
+}
+.cta__prereq-tag {
+  display: inline-block;
+  margin-right: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-2);
+}
+.cta__prereq-link {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cta__prereq-link:hover {
+  color: var(--accent-2);
+}
+.cta__prereq code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--fg);
+}
+
 /* ---- passos ---- */
 .cta__steps {
   list-style: none;
@@ -107,9 +141,13 @@
 }
 
 /* árvore de pastas */
-.cta__tree {
+.cta__treewrap {
+  position: relative;
   margin-top: var(--space-2);
+}
+.cta__tree {
   padding: var(--space-2) var(--space-3);
+  padding-top: 2.6rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--line-dark);
   background: var(--code-bg);
@@ -121,6 +159,22 @@
   white-space: pre;
   min-width: 0;
   max-width: 100%;
+}
+.cta__treecopy {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--fg);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line-dark);
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.cta__treecopy:hover {
+  background: var(--paper-3);
 }
 
 /* dica */

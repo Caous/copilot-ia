@@ -80,10 +80,23 @@ export function Contato() {
           Instale o squad, <em>passo a passo</em>.
         </h2>
         <p className="cta__sub">
-          Você já tem o Claude Code instalado? Então falta pouco. Ele lê agentes,
-          skills e comandos de uma pasta chamada <code>~/.claude</code> — e o que
-          você colocar lá vale para <strong>todos</strong> os seus projetos. Vamos
-          juntos, sem pressa.
+          Ele lê agentes, skills e comandos de uma pasta chamada{" "}
+          <code>~/.claude</code> — e o que você colocar lá vale para{" "}
+          <strong>todos</strong> os seus projetos. Vamos juntos, sem pressa.
+        </p>
+
+        <p className="cta__prereq">
+          <span className="cta__prereq-tag">Antes de começar</span>
+          Ainda não tem o Claude Code instalado?{" "}
+          <a
+            className="cta__prereq-link"
+            href="https://claude.com/claude-code"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instale aqui primeiro →
+          </a>{" "}
+          (é rápido: <code>npm install -g @anthropic-ai/claude-code</code>).
         </p>
 
         <ol className="cta__steps">
@@ -108,9 +121,18 @@ export function Contato() {
                 )}
 
                 {p.tree && (
-                  <pre className="cta__tree" aria-label="Onde salvar cada arquivo">
-                    <code>{p.tree}</code>
-                  </pre>
+                  <div className="cta__treewrap">
+                    <pre className="cta__tree" aria-label="Onde salvar cada arquivo">
+                      <code>{p.tree}</code>
+                    </pre>
+                    <button
+                      className="cta__treecopy"
+                      onClick={() => copiar(p.tree, `tree-${p.n}`)}
+                      aria-live="polite"
+                    >
+                      {copiadoId === `tree-${p.n}` ? "Copiado ✓" : "Copiar árvore"}
+                    </button>
+                  </div>
                 )}
 
                 {p.nota && (

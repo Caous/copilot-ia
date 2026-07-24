@@ -6,6 +6,8 @@
 
 Um site que explica como montamos um time de agentes de IA para desenvolver software com disciplina — e deixa todos os arquivos disponíveis para copiar.
 
+**🌐 Ao vivo: [copilot-ia-smoky.vercel.app](https://copilot-ia-smoky.vercel.app)**
+
 `React 18` · `Vite` · `GSAP + Lenis (CDN)` · `deploy no Vercel`
 
 </div>
@@ -55,7 +57,7 @@ Os arquivos de `src/content/**/*.md` são importados como texto cru (via `import
 
 ## Deploy
 
-Hospedado no **Vercel**, com deploy automático: todo push na `main` publica em produção, e cada Pull Request ganha um preview próprio. Configuração em [`vercel.json`](vercel.json).
+Hospedado no **Vercel** em [copilot-ia-smoky.vercel.app](https://copilot-ia-smoky.vercel.app), com deploy automático: todo push na `main` publica em produção, e cada Pull Request ganha um preview próprio. Configuração em [`vercel.json`](vercel.json).
 
 ## Contribuindo
 

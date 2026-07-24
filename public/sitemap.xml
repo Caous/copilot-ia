@@ -2,7 +2,7 @@
 <!-- TROQUE o domínio pelo real após o deploy -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://copilot-devsquad.vercel.app/</loc>
+    <loc>https://copilot-ia.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

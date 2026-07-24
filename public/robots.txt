@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # TROQUE o domínio abaixo pelo real após o deploy
-Sitemap: https://copilot-devsquad.vercel.app/sitemap.xml
+Sitemap: https://copilot-ia.vercel.app/sitemap.xml

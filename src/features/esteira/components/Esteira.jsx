@@ -35,6 +35,34 @@ export function Esteira() {
           </Reveal>
         ))}
       </ol>
+
+      <Reveal className="esteira__pratica" y={28}>
+        <span className="esteira__pratica-tag">Na prática</span>
+        <div className="esteira__pratica-texto">
+          <p>
+            Imagine que você quer criar um software — digamos, um{" "}
+            <strong>sistema de orçamento de material de construção</strong>. Ou
+            você já tem um sistema e quer adicionar algo, ou corrigir um bug. O
+            time de IA dá conta — mas comece pelo começo: pense no que você quer
+            e escreva em uma frase.
+          </p>
+          <p>
+            Chame o <code>/generate-pbi</code>. Ele vai te fazer perguntas — quem
+            vai usar, o que precisa fazer, quais as regras — e transformar suas
+            respostas na documentação inicial, com critérios claros e cenários de
+            teste. Você não precisa saber escrever isso; o agente conduz.
+          </p>
+          <p>
+            A partir daí é só seguir a esteira: o <code>/validate-pbi</code>{" "}
+            confere se ficou bom e olha seu código de verdade, o{" "}
+            <code>/generate-tasks</code> quebra em tarefas pequenas, e o{" "}
+            <code>/develop</code> põe o time para trabalhar — um escreve o código
+            com testes, outro audita a qualidade, outro revisa. No fim, a
+            funcionalidade está <strong>pronta e provada</strong> — e você
+            conduziu tudo, do pedido à entrega.
+          </p>
+        </div>
+      </Reveal>
     </Section>
   );
 }

@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(5.5rem, 8vh, 6.5rem) var(--space-4);
+  /* Sem camada sólida: o starfield fixo aparece atrás dos gradientes. */
+  background:
+    radial-gradient(110% 80% at 88% 10%, rgba(111, 107, 255, 0.14) 0%, transparent 55%),
+    radial-gradient(80% 60% at 15% 90%, rgba(52, 240, 180, 0.08) 0%, transparent 60%);
+  overflow: hidden;
+}
+
+/* Grid: texto (~58%) | terminal (~42%). Nada absoluto, nada cortado. */
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.hero__visual {
+  min-width: 0;
+}
+
+.hero__title {
+  /* Escala própria, mais contida que o step-4 global */
+  font-size: clamp(2.2rem, 1.5rem + 2.6vw, 3.6rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  margin-block: var(--space-1) var(--space-2);
+  max-width: 24ch;
+}
+
+/* Linhas em gradiente mint→ultramarine (o destaque claro da headline) */
+.hero__grad {
+  background: linear-gradient(92deg, var(--accent) 10%, #7ef5cf 55%, var(--accent-2) 120%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Cada "linha" é uma janela que recorta o texto que sobe na intro. */
+.hero__line {
+  display: block;
+  overflow: hidden;
+}
+.hero__line > span {
+  display: block;
+}
+
+.hero__lead {
+  max-width: 60ch;
+  font-size: var(--step-0);
+  color: var(--fg);
+  opacity: 0.82;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.hero__meta dt {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.hero__meta dd {
+  font-size: var(--step-1);
+  font-weight: 500;
+  color: var(--fg);
+}
+
+/* Tablet/mobile: empilha — texto em cima, terminal embaixo */
+@media (max-width: 900px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  .hero__title {
+    max-width: 100%;
+  }
+}

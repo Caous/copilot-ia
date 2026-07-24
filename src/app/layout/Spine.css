@@ -1,0 +1,26 @@
+.spine {
+  position: fixed;
+  top: 0;
+  left: max(1.5rem, calc((100vw - var(--container)) / 2 - 2.5rem));
+  width: 40px;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.spine__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.spine__path {
+  filter: drop-shadow(0 0 6px rgba(52, 240, 180, 0.35));
+}
+
+/* Em telas estreitas não há gutter para a espinha — escondemos. */
+@media (max-width: 1024px) {
+  .spine {
+    display: none;
+  }
+}

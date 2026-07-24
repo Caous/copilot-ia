@@ -1,0 +1,28 @@
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: var(--space-3);
+}
+
+.eyebrow__mark {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--glow);
+}
+
+.is-dark .eyebrow__mark {
+  box-shadow: 0 0 12px 1px rgba(52, 240, 180, 0.6);
+}
+
+.eyebrow__index {
+  color: var(--accent);
+  font-weight: 500;
+}

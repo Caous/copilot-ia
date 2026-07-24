@@ -1,8 +1,10 @@
 <div align="center">
 
-# Copilot — site do AI Dev Squad
+# Copilot — AI Dev Squad
 
-**Uma página que explica como montamos um time de agentes de IA para desenvolver software com disciplina — e deixa todos os arquivos disponíveis para copiar.**
+**Descubra o poder da Inteligência Artificial: estratégia, time de IA e projetos com resultados reais.**
+
+Um site que explica como montamos um time de agentes de IA para desenvolver software com disciplina — e deixa todos os arquivos disponíveis para copiar.
 
 `React 18` · `Vite` · `GSAP + Lenis (CDN)` · `deploy no Vercel`
 
@@ -24,6 +26,8 @@ O conteúdo real (os `.md` dos agentes, filosofias, comandos e templates) vive e
 
 | Seção | Conteúdo |
 |---|---|
+| **Hero** | A tese + um terminal com o squad em ação |
+| **Manifesto** | Autoria: a IA produz o código, você constrói a obra |
 | **Esteira** | As 4 etapas do fluxo, com o motivo de cada uma existir |
 | **Biblioteca** | 9 agentes · 3 filosofias · 4 comandos · 2 templates — todos copiáveis |
 | **Começar** | Como instalar o squad em `~/.claude` |
@@ -31,6 +35,8 @@ O conteúdo real (os `.md` dos agentes, filosofias, comandos e templates) vive e
 ## Rodar localmente
 
 ```bash
+git clone https://github.com/Caous/copilot-ia.git
+cd copilot-ia
 npm install
 npm run dev      # http://localhost:5173
 ```
@@ -49,12 +55,24 @@ Os arquivos de `src/content/**/*.md` são importados como texto cru (via `import
 
 ## Deploy
 
-Configuração de Vercel incluída (`vercel.json`). Importe o repositório em [vercel.com/new](https://vercel.com/new) — detecta Vite automaticamente.
+Hospedado no **Vercel**, com deploy automático: todo push na `main` publica em produção, e cada Pull Request ganha um preview próprio. Configuração em [`vercel.json`](vercel.json).
 
-## Sobre o código do site
+## Contribuindo
 
-Para quem for manter/estender **este site**, a documentação técnica (organização por feature, design tokens, animações) está em [`docs/`](docs/). Ela descreve como a página foi construída — não faz parte do conteúdo exibido ao visitante.
+Contribuições são bem-vindas — mas passam pelo meu Pull Request. A branch `main` é protegida: ninguém commita direto nela.
+
+1. Faça um **fork** (ou uma branch, se tiver acesso).
+2. Crie sua branch: `git checkout -b feat/minha-mudanca`.
+3. Abra um **Pull Request** para a `main`.
+4. O PR roda o build automaticamente e **aguarda minha revisão e aprovação** antes do merge.
+
+Detalhes em [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Autor
+
+**Gustavo Nascimento**
+[LinkedIn](https://www.linkedin.com/in/gusta-nascimento/) · [GitHub](https://github.com/Caous) · caous.g@gmail.com
 
 ## Licença
 
-MIT.
+[MIT](LICENSE).

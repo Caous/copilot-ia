@@ -1,0 +1,40 @@
+.neuralnet {
+  position: relative;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-dark);
+  background:
+    radial-gradient(70% 70% at 50% 35%, rgba(111, 107, 255, 0.08), transparent 70%),
+    var(--code-bg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.neuralnet__canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.neuralnet__labels {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.neuralnet__labels span:last-child {
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .neuralnet__canvas {
+    aspect-ratio: 16 / 10;
+  }
+}

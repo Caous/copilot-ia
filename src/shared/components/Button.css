@@ -1,0 +1,50 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition:
+    transform var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+  will-change: transform;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn__arrow {
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.btn:hover .btn__arrow {
+  transform: translateX(4px);
+}
+
+/* Primário: preenchido com o acento */
+.btn--primary {
+  background: var(--accent);
+  color: var(--paper);
+  box-shadow: var(--shadow-glow);
+}
+.btn--primary:hover {
+  background: #5cf4c4;
+  transform: translateY(-2px);
+}
+
+/* Ghost: contorno hairline */
+.btn--ghost {
+  background: transparent;
+  color: var(--fg);
+  box-shadow: inset 0 0 0 1px var(--hairline);
+}
+.btn--ghost:hover {
+  background: var(--surface);
+  transform: translateY(-2px);
+}

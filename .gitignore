@@ -1,0 +1,39 @@
+# dependências
+node_modules
+.pnp
+.pnp.js
+
+# build
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+
+# testes / cobertura
+coverage
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Vercel (link/config local — não versionar)
+.vercel
+
+# cache de ferramentas
+.turbo
+.cache
+
+# editores / SO
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+
+# ambiente
+.env
+.env.*
+!.env.example

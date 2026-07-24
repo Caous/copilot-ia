@@ -1,0 +1,19 @@
+.section {
+  position: relative;
+  padding-block: var(--space-7);
+  /* Transparente: o starfield (fundo fixo) aparece através das seções
+     padrão. Seções .is-dark são sólidas — criam ritmo de blocos. */
+  background: transparent;
+  color: var(--fg);
+  transition: background var(--dur) var(--ease-out);
+}
+
+.section.is-dark {
+  background: var(--ink-2);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-block: var(--space-6);
+  }
+}

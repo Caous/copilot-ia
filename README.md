@@ -37,8 +37,14 @@ O conteúdo real (os `.md` dos agentes, filosofias, comandos e templates) vive e
 ## Como instalar e usar o squad (passo a passo)
 
 Este guia é para quem quer **usar** os agentes no seu próprio Claude Code — mesmo
-sem experiência. Pré-requisito: ter o [Claude Code](https://claude.com/claude-code)
-instalado.
+sem experiência.
+
+> **Antes de começar — ainda não tem o Claude Code?**
+> Instale primeiro: **[claude.com/claude-code](https://claude.com/claude-code)**.
+> É rápido:
+> ```bash
+> npm install -g @anthropic-ai/claude-code
+> ```
 
 > **O que é a pasta `~/.claude`?** É uma pasta (oculta) dentro da sua pasta de
 > usuário onde o Claude Code procura o que você adiciona: agentes, skills e
